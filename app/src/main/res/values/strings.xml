@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UI_Desigining_Google_movies</string>
+    <string name="beauty_and_the_beast">Beauty and the Beast</string>
+    <string name="pg13_comedy_113_min">pg13 | comedy | 113 min</string>
+    <string name="rent_3_99">Rent $3.99</string>
+    <string name="buy_12_99">Buy 12.99</string>
+</resources>

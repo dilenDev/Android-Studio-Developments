@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewHeder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/header" />
+
+    <ImageView
+        android:id="@+id/imageViewPoster"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewHeder"
+        app:layout_constraintDimensionRatio="w,2:3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewHeder"
+        app:srcCompat="@drawable/poster" />
+
+    <TextView
+        android:id="@+id/textViewHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/beauty_and_the_beast"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewBookmark"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPoster"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewHeder"
+        tools:text="Beauty and the Beast" />
+
+    <ImageView
+        android:id="@+id/imageViewBookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/textViewHeading"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewHeder"
+        app:srcCompat="@drawable/bookmark"
+        app:tint="@color/colorAccent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <TextView
+        android:id="@+id/textViewSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/pg13_comedy_113_min"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPoster"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeading"
+        tools:text="pg13 | comedy | 113 min" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="imageViewPoster,textViewSubtitle"
+        tools:layout_editor_absoluteY="731dp" />
+
+    <Button
+        android:id="@+id/btnRent"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/rent_3_99"
+        app:layout_constraintEnd_toStartOf="@+id/btnBuy"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2"
+        tools:text="Rent $3.99" />
+
+    <Button
+        android:id="@+id/btnBuy"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/buy_12_99"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/btnRent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2"
+        tools:text="Buy 12.99" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="btnBuy,btnRent"
+        tools:layout_editor_absoluteY="731dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorAccent"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButtonFamily"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/barrier4"
+        app:srcCompat="@drawable/bookmark" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorAccent"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButtonPrecentage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButtonRating"
+        app:layout_constraintTop_toBottomOf="@id/barrier4"
+        app:srcCompat="@drawable/bookmark" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonPrecentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F4E38E"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButtonSimiller"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButtonFamily"
+        app:layout_constraintTop_toBottomOf="@id/barrier4"
+        app:srcCompat="@drawable/tomato" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonSimiller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorAccent"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButtonPrecentage"
+        app:layout_constraintTop_toBottomOf="@id/barrier4"
+        app:srcCompat="@drawable/bookmark" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="242 Ratings"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonRating"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButtonRating"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonRating"
+        tools:text="242 Ratings" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Family"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonFamily"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButtonFamily"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonFamily"
+        tools:text="Family" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="71%"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonPrecentage"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButtonPrecentage"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonPrecentage"
+        tools:text="71%" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Similar"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonSimiller"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButtonSimiller"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonSimiller"
+        tools:text="Similar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
