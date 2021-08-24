@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Start Activity forResult</string>
+    <string name="pass_data_through_activities">Pass Data through Activities</string>
+    <string name="enter_number_1">Enter Number 1</string>
+    <string name="enter_number_2">Enter Number 2</string>
+    <string name="your_result">Your Result</string>
+    <string name="open_activity_two">Open Activity Two</string>
+</resources>

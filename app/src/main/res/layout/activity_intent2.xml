@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C7F5F5"
+    tools:context=".ActivityIntent2">
+
+    <TextView
+        android:id="@+id/text_view_numbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:maxEms="15"
+        android:text="Numbers :"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/btnAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="@color/teal_200"
+        android:text="Addition"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/btnSub"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/text_view_numbers" />
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Subtract"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:background="@color/teal_200"
+        style="@style/Widget.AppCompat.Button.Colored"
+        app:layout_constraintBottom_toTopOf="@id/btnDevide"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/btnAdd" />
+
+    <Button
+        android:id="@+id/btnDevide"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Division"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        android:background="@color/teal_200"
+        style="@style/Widget.AppCompat.Button.Colored"
+        app:layout_constraintBottom_toTopOf="@id/btnMultiplication"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/btnSub" />
+
+    <Button
+        android:id="@+id/btnMultiplication"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Multiplication"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:background="@color/teal_200"
+        style="@style/Widget.AppCompat.Button.Colored"
+        app:layout_constraintBottom_toTopOf="@id/btnModulus"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/btnDevide" />
+
+    <Button
+        android:id="@+id/btnModulus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Modulus"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:background="@color/teal_200"
+        style="@style/Widget.AppCompat.Button.Colored"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/btnMultiplication" />
+
+    <Button
+        android:id="@+id/btnBackToFirst"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@id/btnModulus" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
