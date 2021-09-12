@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Class_RetroFit_with_REST_API</string>
+    <string name="text">Text</string>
+    <string name="title">Title</string>
+    <string name="user_id">USER ID</string>
+    <string name="id">ID</string>
 </resources>
